@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+    crossorigin="anonymous" />
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#icon').click(function(){
+                $('.menu').toggleClass('show');
+            });
+        });
+    </script>
+    <title>Innov</title>
+</head>
+<body>
+    <header>
+        <div class="innov">
+            <h2>Innov</h2>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="./index.html" id="home">Home</a></li>
+                <li><a href="./work.html">Work</a></li>
+                <li><a href="./portfolio.html">Portfolio</a></li>
+            </ul>
+        </div>
+
+        <label id="icon">
+            <i class="fas fa-list"></i>
+        </label>
+    </header>
+
+    <div class="about">
+        <h2 id="name">Shobhit Lohani</h2>
+        <h2 id="info">Programmer, Front-End Web Developer and DevOps enthusiast.</h2>
+        <h2 id="idea">Learning new things for change and Innovatation.</h2>
+    </div>
+
+    <div class="links">
+        <div class="linkedin">
+            <a href="https://www.linkedin.com/in/shobhit-kumar-a063791a5/" target="_blank">    
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+        <div class="github">
+            <a href="https://github.com/sklohani" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <div class="facebook">
+            <a href="https://www.facebook.com/people/Shobhit-Lohani/100023143753540" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

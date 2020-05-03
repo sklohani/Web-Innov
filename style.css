@@ -1,0 +1,364 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body{
+    background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(quantum-1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 100vh;
+}
+
+header{
+    position: fixed;
+    width: 100vw;
+    height: 53px;
+    left: 0px;
+    top: 0px;
+
+    background: #39BCB4;
+}
+
+header .innov{
+    position: absolute;
+    /* width: 88px; */
+    height: 42px;
+    left: 60px;
+    top: 7px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+header .menu{
+    position: absolute;
+    /* background-color: black; */
+    width: 550px;
+    /* height: 33px; */
+    right: 50px;
+    top: 11px;
+}
+
+header .menu ul{
+    list-style-type: none;
+}
+
+header .menu ul li{
+    display: inline-block;
+}
+
+header .menu a{
+    text-decoration: none;
+    margin: 0px 50px;
+    width: 76px;
+    height: 33px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 33px;
+    color: #FFFFFF;
+    
+}
+
+header .menu a:hover{
+    border-bottom: solid 2px white;
+    padding-bottom: 8px;
+    transition: all 0.5s ease;
+}
+
+header .menu #home{
+    border-bottom: solid 2px white;
+    padding-bottom: 10px;
+}
+
+header #icon{
+    color: white;
+    font-size: 26px;
+    line-height: 60px;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+.about{
+    /* background: yellowgreen; */
+    position: absolute;
+    width: 700px;
+    height: 293px;
+    left: 180px;
+    top: 280px;
+}
+
+.about h2{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.about #name{
+    font-size: 48px;
+    margin-bottom: 40px;
+    padding-bottom: 5px;
+    border-bottom: solid 1px black;
+}
+
+.about #name:hover{
+    border-bottom: solid 1px white;
+    transition: all 0.6s ease;
+}
+
+.about #info{
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: normal;
+    color: rgb(238, 238, 238);
+}
+
+.about #idea{
+    font-size: 22px;
+    font-weight: normal;
+    color: rgb(214, 214, 214);
+}
+
+.links{
+    /* background: black; */
+    position: absolute;
+    bottom: 85px;
+    right: 10%;
+}
+
+.links div{
+    /* background: white; */
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+    /* transition: all 0.5s ease; */
+}
+
+.links div i{
+    font-size: 48px;
+    color: rgb(38, 154, 200);
+    padding-bottom: 10px;
+    border-bottom: solid 1px black;
+}
+
+.links div i:hover{
+    color: black;
+    transition: all 0.2s ease;
+}
+
+@media screen and (max-width: 1580px){
+    .links{
+        right: 50%;
+        transform: translate(50%, 50%);
+    }
+
+    .links div i:hover{
+        border-bottom: solid 1px white;
+        color: white;
+    }
+
+    .about{
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .about #name{
+        font-size: 44px;
+    }
+
+    .about #info{
+        font-size: 24px;
+    }
+
+    .about #idea{
+        font-weight: 18px;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    header .innov{
+        font-size: 32px;
+    }
+
+    header .menu{
+        width: 450px;
+        right: 5px;
+    }
+
+    header .menu a{
+        margin: 0px 30px;
+        font-size: 26px;
+    }
+
+    .about{
+        width: 500px;
+    }
+
+    .about #name{
+        font-size: 40px;
+    }
+
+    .about #info{
+        font-size: 22px;
+    }
+
+    .about #idea{
+        font-weight: 20px;
+    }
+}
+
+@media screen and (max-width: 780px){
+    header{
+        z-index: 1;
+    }
+
+    header #icon{
+        display: block;
+    }
+
+    header .menu{
+        position: absolute;
+        width: 100%;
+        background: black;
+        top: -150%;
+        text-align: center;
+        clip-path: circle(100px at 50% -20%);
+        -webkit-clip-path: circle(100px at 50% -20%);
+        transition: all 0.5s ease;
+        z-index: -1;
+    }
+
+
+    header .menu ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    
+    header .menu ul #home{
+        border: none;
+        background: rgb(27, 27, 27);
+        padding: 15px;
+    }
+
+    header .menu.show{
+        top: 55px;
+        clip-path: circle(1000px at 50%);
+        -webkit-clip-path: circle(1000px at 50%);
+    }
+
+    .about{
+        width: 400px;
+    }
+
+    .about #name{
+        font-size: 38px;
+        margin-bottom: 20px;
+    }
+
+    .about #info{
+        font-size: 20px;
+    }
+
+    .about #idea{
+        font-size: 16px;
+    }
+
+    .links div i{
+        font-size: 38px;
+    }
+
+    .links div{
+        margin-right: 25px;
+    }
+}
+
+@media screen and (max-width: 540px){
+    header .innov{
+        font-size: 28px;
+    }
+
+    header #icon{
+        font-size: 28px;
+    }
+
+    header .menu a{
+        font-size: 22px;
+        margin: 30px 0;
+        line-height: 20px;
+    }
+
+
+    .about{
+        width: 350px;
+        top: 300px;
+    }
+
+    .about #name{
+        font-size: 30px;
+    }
+
+    .about #info{
+        font-size: 18px;
+    }
+
+    .about #idea{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 380px){
+    header .innov{
+        font-size: 22px;
+    }
+
+    header #icon{
+        font-size: 24px;
+    }
+
+    header .menu a{
+        font-size: 18px;
+    }
+
+    .about{
+        width: 300px;
+    }
+
+    .about #name{
+        font-size: 22px;
+    }
+
+    .about #info{
+        font-size: 16px;
+    }
+
+    .about #idea{
+        font-size: 12px;
+    }
+
+    .links div i{
+        font-size: 28px;
+    }
+
+    .links div{
+        margin-right: 20px;
+    }
+}
